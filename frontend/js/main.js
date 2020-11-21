@@ -4,6 +4,7 @@ import {Shares} from "./shares";
 import jam from '../img/jam.svg';
 import * as api from "./api";
 import toaster from "./toaster";
+import {Activity} from "./activity";
 
 export const Main = (vnode) => {
     const { userData } = vnode.attrs;
@@ -21,6 +22,7 @@ export const Main = (vnode) => {
             ),
             m(Sharers, {sharers: userData.sharers}),
             m(Shares, {shares: userData.shares}),
+            m(Activity),
         )
     };
 };
